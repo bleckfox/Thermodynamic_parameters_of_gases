@@ -3,3 +3,7 @@ I using:
 2) PyInstaller 3.5
 3) PyQt5
 4) math library
+
+The main file is Lariel_v2.0
+
+The file lariel_v2.py  and  lariel.ui  is GUI.

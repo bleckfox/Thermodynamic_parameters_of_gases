@@ -1,0 +1,4760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>740</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>740</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>740</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Расчет параметров газов</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>731</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="air">
+     <attribute name="title">
+      <string>Воздух</string>
+     </attribute>
+     <widget class="QLabel" name="temperature_K_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_air">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_air">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_air">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_air">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_air">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_air">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_air">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_air">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_air_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_air_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_air_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="water_vapor">
+     <attribute name="title">
+      <string>Водяной пар</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_wat_vap">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_wat_vap_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_wat_vap_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_wat_vap_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="oxygen">
+     <attribute name="title">
+      <string>Кислород</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_oxy">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_oxy">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_oxy_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_oxy_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_oxy_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="nitrogen">
+     <attribute name="title">
+      <string>Азот</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_nitro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="nitrogen_dioxide">
+     <attribute name="title">
+      <string>Атмосферный азот</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_diox">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_nitro_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="hydrogen">
+     <attribute name="title">
+      <string>Водород</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_hydro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_hydro">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_hydro_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_hydro_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_hydro_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="carbon_dioxide">
+     <attribute name="title">
+      <string>Углекислый газ</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carb_diox">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_carb_diox_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_carb_diox_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_carb_diox_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="carbon_oxide">
+     <attribute name="title">
+      <string>Оксид углерода</string>
+     </attribute>
+     <widget class="QLabel" name="mol_entropy_point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="result_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Определить параметры</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтропия, кДж/кг*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_K_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>241</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтропия, кДж/кМоль*К</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temperature_C_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Температура, С</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Молярная энтальпия, кДж/кМоль</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_carbone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Энтальпия, кДж/кг</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carbone">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_carbone_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_carbone_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_enthalpy_point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>200</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="entropy_point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>240</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>50</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Точка 4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="temp_K_point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>120</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="temp_C_point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enthalpy_point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="mol_entropy_point_carbone_4">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>280</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="author">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>281</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Разработчики: Шамиль Байрамов, Джамиль Байрамов</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>740</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Воздух</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Азот</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Атмосферный азот</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
